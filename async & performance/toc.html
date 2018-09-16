@@ -1,0 +1,1093 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>异步与性能 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="foreword.html" />
+    
+    
+    <link rel="prev" href="../types & grammar/apB.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../preface.html">
+            
+                <a href="../preface.html">
+            
+                    
+                    你不懂JS：前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../up & going/toc.html">
+            
+                <a href="../up & going/toc.html">
+            
+                    
+                    入门与进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../up & going/foreword.html">
+            
+                <a href="../up & going/foreword.html">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../up & going/ch1.html">
+            
+                <a href="../up & going/ch1.html">
+            
+                    
+                    第一章：进入编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../up & going/ch2.html">
+            
+                <a href="../up & going/ch2.html">
+            
+                    
+                    第二章：进入JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../up & going/ch3.html">
+            
+                <a href="../up & going/ch3.html">
+            
+                    
+                    第三章：进入YDKJS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../up & going/apA.html">
+            
+                <a href="../up & going/apA.html">
+            
+                    
+                    附录A: 鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../scope & closures/toc.html">
+            
+                <a href="../scope & closures/toc.html">
+            
+                    
+                    作用域与闭包
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../scope & closures/ch1.html">
+            
+                <a href="../scope & closures/ch1.html">
+            
+                    
+                    第一章：什么是作用域？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../scope & closures/ch2.html">
+            
+                <a href="../scope & closures/ch2.html">
+            
+                    
+                    第二章：词法作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../scope & closures/ch3.html">
+            
+                <a href="../scope & closures/ch3.html">
+            
+                    
+                    第三章：函数与块儿作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../scope & closures/ch4.html">
+            
+                <a href="../scope & closures/ch4.html">
+            
+                    
+                    第四章：提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../scope & closures/ch5.html">
+            
+                <a href="../scope & closures/ch5.html">
+            
+                    
+                    第五章：作用域闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../scope & closures/apA.html">
+            
+                <a href="../scope & closures/apA.html">
+            
+                    
+                    附录A：动态作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../scope & closures/apB.html">
+            
+                <a href="../scope & closures/apB.html">
+            
+                    
+                    附录B：填补块儿作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../scope & closures/apC.html">
+            
+                <a href="../scope & closures/apC.html">
+            
+                    
+                    附录C：词法this
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../scope & closures/apD.html">
+            
+                <a href="../scope & closures/apD.html">
+            
+                    
+                    附录D：鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../this & object prototypes/toc.html">
+            
+                <a href="../this & object prototypes/toc.html">
+            
+                    
+                    this与对象原型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../this & object prototypes/foreword.html">
+            
+                <a href="../this & object prototypes/foreword.html">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../this & object prototypes/ch1.html">
+            
+                <a href="../this & object prototypes/ch1.html">
+            
+                    
+                    第一章: this还是That?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../this & object prototypes/ch2.html">
+            
+                <a href="../this & object prototypes/ch2.html">
+            
+                    
+                    第二章: this豁然开朗!
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../this & object prototypes/ch3.html">
+            
+                <a href="../this & object prototypes/ch3.html">
+            
+                    
+                    第三章: 对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../this & object prototypes/ch4.html">
+            
+                <a href="../this & object prototypes/ch4.html">
+            
+                    
+                    第四章: 混合（淆）“类”的对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../this & object prototypes/ch5.html">
+            
+                <a href="../this & object prototypes/ch5.html">
+            
+                    
+                    第五章: 原型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../this & object prototypes/ch6.html">
+            
+                <a href="../this & object prototypes/ch6.html">
+            
+                    
+                    第六章: 行为委托
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../this & object prototypes/apA.html">
+            
+                <a href="../this & object prototypes/apA.html">
+            
+                    
+                    附录A: ES6 class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../this & object prototypes/apB.html">
+            
+                <a href="../this & object prototypes/apB.html">
+            
+                    
+                    附录B: 鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../types & grammar/toc.html">
+            
+                <a href="../types & grammar/toc.html">
+            
+                    
+                    类型与文法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../types & grammar/foreword.html">
+            
+                <a href="../types & grammar/foreword.html">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../types & grammar/ch1.html">
+            
+                <a href="../types & grammar/ch1.html">
+            
+                    
+                    第一章：类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../types & grammar/ch2.html">
+            
+                <a href="../types & grammar/ch2.html">
+            
+                    
+                    第二章：值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../types & grammar/ch3.html">
+            
+                <a href="../types & grammar/ch3.html">
+            
+                    
+                    第三章：原生类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../types & grammar/ch4.html">
+            
+                <a href="../types & grammar/ch4.html">
+            
+                    
+                    第四章：强制转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../types & grammar/ch5.html">
+            
+                <a href="../types & grammar/ch5.html">
+            
+                    
+                    第五章：文法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../types & grammar/apA.html">
+            
+                <a href="../types & grammar/apA.html">
+            
+                    
+                    附录A：混合环境下的JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../types & grammar/apB.html">
+            
+                <a href="../types & grammar/apB.html">
+            
+                    
+                    附录B: 鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="toc.html">
+            
+                <a href="toc.html">
+            
+                    
+                    异步与性能
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="foreword.html">
+            
+                <a href="foreword.html">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ch1.html">
+            
+                <a href="ch1.html">
+            
+                    
+                    第一章: 异步:现在与稍后
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="ch2.html">
+            
+                <a href="ch2.html">
+            
+                    
+                    第二章: 回调
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="ch3.html">
+            
+                <a href="ch3.html">
+            
+                    
+                    第三章: Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="ch4.html">
+            
+                <a href="ch4.html">
+            
+                    
+                    第四章: Generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="ch5.html">
+            
+                <a href="ch5.html">
+            
+                    
+                    第五章: 程序性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="ch6.html">
+            
+                <a href="ch6.html">
+            
+                    
+                    第六章: 基准分析与调优
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="apA.html">
+            
+                <a href="apA.html">
+            
+                    
+                    附录A：库：asynquence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="apB.html">
+            
+                <a href="apB.html">
+            
+                    
+                    附录B：高级异步模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="apC.html">
+            
+                <a href="apC.html">
+            
+                    
+                    附录C：鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../es6 & beyond/toc.html">
+            
+                <a href="../es6 & beyond/toc.html">
+            
+                    
+                    ES6与未来
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../es6 & beyond/foreword.html">
+            
+                <a href="../es6 & beyond/foreword.html">
+            
+                    
+                    序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../es6 & beyond/ch1.html">
+            
+                <a href="../es6 & beyond/ch1.html">
+            
+                    
+                    第一章：ES？现在与未来
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../es6 & beyond/ch2.html">
+            
+                <a href="../es6 & beyond/ch2.html">
+            
+                    
+                    第二章：语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../es6 & beyond/ch3.html">
+            
+                <a href="../es6 & beyond/ch3.html">
+            
+                    
+                    第三章：组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../es6 & beyond/ch4.html">
+            
+                <a href="../es6 & beyond/ch4.html">
+            
+                    
+                    第四章：异步流程控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../es6 & beyond/ch5.html">
+            
+                <a href="../es6 & beyond/ch5.html">
+            
+                    
+                    第五章：集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../es6 & beyond/ch6.html">
+            
+                <a href="../es6 & beyond/ch6.html">
+            
+                    
+                    第六章：新增API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../es6 & beyond/ch7.html">
+            
+                <a href="../es6 & beyond/ch7.html">
+            
+                    
+                    第七章：元编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../es6 & beyond/ch8.html">
+            
+                <a href="../es6 & beyond/ch8.html">
+            
+                    
+                    第八章：ES6之后
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../es6 & beyond/apA.html">
+            
+                <a href="../es6 & beyond/apA.html">
+            
+                    
+                    附录A：鸣谢
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >异步与性能</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x4F60;&#x4E0D;&#x61C2;js-&#x5F02;&#x6B65;&#x4E0E;&#x6027;&#x80FD;"><b>1. </b>&#x4F60;&#x4E0D;&#x61C2;JS: &#x5F02;&#x6B65;&#x4E0E;&#x6027;&#x80FD;</a></li><ul><li><span class="title-icon "></span><a href="#&#x76EE;&#x5F55;"><b>1.1. </b>&#x76EE;&#x5F55;</a></li></ul></ul></div><a href="#&#x4F60;&#x4E0D;&#x61C2;js-&#x5F02;&#x6B65;&#x4E0E;&#x6027;&#x80FD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4F60;&#x4E0D;&#x61C2;js-&#x5F02;&#x6B65;&#x4E0E;&#x6027;&#x80FD;"><a name="&#x4F60;&#x4E0D;&#x61C2;js-&#x5F02;&#x6B65;&#x4E0E;&#x6027;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x4F60;&#x4E0D;&#x61C2;js-&#x5F02;&#x6B65;&#x4E0E;&#x6027;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4F60;&#x4E0D;&#x61C2;JS: &#x5F02;&#x6B65;&#x4E0E;&#x6027;&#x80FD;</h1>
+<h2 id="&#x76EE;&#x5F55;"><a name="&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x76EE;&#x5F55;</h2>
+<ul>
+<li>&#x5E8F;</li>
+<li>&#x524D;&#x8A00;</li>
+<li>&#x7B2C;&#x4E00;&#x7AE0;: &#x5F02;&#x6B65;:&#x73B0;&#x5728;&#x4E0E;&#x7A0D;&#x540E;<ul>
+<li>&#x5757;&#x513F;&#xFF08;Chunks&#xFF09;&#x4E2D;&#x7684;&#x7A0B;&#x5E8F;</li>
+<li>&#x4E8B;&#x4EF6;&#x8F6E;&#x8BE2;&#xFF08;Event Loop&#xFF09;</li>
+<li>&#x5E76;&#x884C;&#x7EBF;&#x7A0B;</li>
+<li>&#x5E76;&#x53D1;</li>
+<li>Jobs</li>
+<li>&#x8BED;&#x53E5;&#x6392;&#x5E8F;</li>
+</ul>
+</li>
+<li>&#x7B2C;&#x4E8C;&#x7AE0;: &#x56DE;&#x8C03;<ul>
+<li>&#x5EF6;&#x7EED;</li>
+<li>&#x987A;&#x5E8F;&#x7684;&#x5927;&#x8111;</li>
+<li>&#x4FE1;&#x4EFB;&#x95EE;&#x9898;</li>
+<li>&#x5C1D;&#x8BD5;&#x62EF;&#x6551;&#x56DE;&#x8C03;</li>
+</ul>
+</li>
+<li>&#x7B2C;&#x4E09;&#x7AE0;: Promise<ul>
+<li>&#x4EC0;&#x4E48;&#x662F; Promise&#xFF1F;</li>
+<li>Thenable &#x9E2D;&#x5B50;&#x7C7B;&#x578B;&#xFF08;Duck Typing&#xFF09;</li>
+<li>Promise&#x7684;&#x4FE1;&#x4EFB;</li>
+<li>&#x94FE;&#x5F0F;&#x6D41;&#x7A0B;</li>
+<li>&#x9519;&#x8BEF;&#x5904;&#x7406;</li>
+<li>Promise &#x6A21;&#x5F0F;</li>
+<li>Promise API&#x6982;&#x89C8;</li>
+<li>Promise &#x7684;&#x9650;&#x5236;</li>
+</ul>
+</li>
+<li>&#x7B2C;&#x56DB;&#x7AE0;: Generator<ul>
+<li>&#x6253;&#x7834;&#x8FD0;&#x884C;&#x81F3;&#x5B8C;&#x6210;</li>
+<li>&#x751F;&#x6210;&#x503C;</li>
+<li>&#x5F02;&#x6B65;&#x5730;&#x8FED;&#x4EE3; Generator</li>
+<li>Generators + Promises</li>
+<li>Generator &#x59D4;&#x6258;</li>
+<li>Generator &#x5E76;&#x53D1;</li>
+<li>Thunks</li>
+<li>&#x524D;ES6&#x65F6;&#x4EE3;&#x7684; Generator</li>
+</ul>
+</li>
+<li>&#x7B2C;&#x4E94;&#x7AE0;: &#x7A0B;&#x5E8F;&#x6027;&#x80FD;<ul>
+<li>Web Workers</li>
+<li>SIMD</li>
+<li>asm.js</li>
+</ul>
+</li>
+<li>&#x7B2C;&#x516D;&#x7AE0;: &#x57FA;&#x51C6;&#x5206;&#x6790;&#x4E0E;&#x8C03;&#x4F18;<ul>
+<li>&#x57FA;&#x51C6;&#x5206;&#x6790;&#xFF08;Benchmarking&#xFF09;</li>
+<li>&#x4E0A;&#x4E0B;&#x6587;&#x4E3A;&#x738B;</li>
+<li>jsPerf.com</li>
+<li>&#x7F16;&#x5199;&#x597D;&#x7684;&#x6D4B;&#x8BD5;</li>
+<li>&#x5FAE;&#x89C2;&#x6027;&#x80FD;</li>
+<li>&#x5C3E;&#x90E8;&#x8C03;&#x7528;&#x4F18;&#x5316; (TCO)</li>
+</ul>
+</li>
+<li>&#x9644;&#x5F55;A&#xFF1A;&#x5E93;&#xFF1A;asynquence</li>
+<li>&#x9644;&#x5F55;B&#xFF1A;&#x9AD8;&#x7EA7;&#x5F02;&#x6B65;&#x6A21;&#x5F0F;</li>
+<li>&#x9644;&#x5F55;C&#xFF1A;&#x9E23;&#x8C22;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../types & grammar/apB.html" class="navigation navigation-prev " aria-label="Previous page: 附录B: 鸣谢">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="foreword.html" class="navigation navigation-next " aria-label="Next page: 序">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"异步与性能","level":"1.7","depth":1,"next":{"title":"序","level":"1.7.1","depth":2,"path":"async & performance/foreword.md","ref":"async & performance/foreword.md","articles":[]},"previous":{"title":"附录B: 鸣谢","level":"1.6.8","depth":2,"path":"types & grammar/apB.md","ref":"types & grammar/apB.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-sharing","-livereload","-search","search-plus","anchor-navigation-ex","splitter","prism","theme-comscore"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"search-plus":{},"splitter":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"3.2.3"},"file":{"path":"async & performance/toc.md","mtime":"2018-09-16T02:08:36.004Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-16T14:05:56.301Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
